@@ -3,6 +3,7 @@ import '../../styles/Login/style.scss'
 import {useEffect, useState} from 'react'
 
 import {useMutation, gql} from '@apollo/client'
+import { useNavigate } from "react-router-dom";
 
 const SIGN_IN = gql`
 mutation signIn($input: SignInInput!){
@@ -15,13 +16,34 @@ mutation signIn($input: SignInInput!){
   }
 }
 `
+
+type SignIn = {
+    signIn: {
+        token: string,
+        user: {
+            email: string,
+            name: string
+        }
+    }
+}
 const Login = () => {
 
+    const navigate = useNavigate();
     const [password, setPassword] = useState("")
     const [email, setEmail] = useState("")
 
-    const [addTodo, { data, loading, error }] = useMutation(SIGN_IN)
+    const [SignInPage, { data, loading, error }] = useMutation<SignIn>(SIGN_IN)
 
+    useEffect(() => {
+
+        if(data) navigate("/dashboard");
+    }, [data])
+
+    const signIn = () => {
+        SignInPage({ variables: { input: {email, password}}})
+
+        
+    }
   return (
     <>
         <header className='logo-container'>
@@ -57,7 +79,7 @@ const Login = () => {
 
                 {/* </Link> */}
             </form>
-            <button onClick={() => {addTodo({ variables: { input: {"email": "trainees@b8one.com", "password": "NextLevel123!"}}});}} className='login-modal__submit'>Entrar</button>
+            <button onClick={signIn} className='login-modal__submit'>Entrar</button>
             <hr />
             <div className='go-to-register__container'>
                 <Link className='go-to-register__link' to='/'>Não possui conta? Cadastre-se</Link>
