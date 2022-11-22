@@ -64,7 +64,28 @@ const Aside = () => {
                     fill="#2E046D"
                   />
                 </svg>
-                <span>Marília Vilarinho Almada</span>
+                <span className="main__table-client--name">Marília Vilarinho Almada</span>
+              </div>
+              <span>30/09/2022</span>
+              <span>R$ 999,00</span>
+              <span>R$ 99,00</span>
+              <span className="main__table--status">Confirmado</span>
+            </div>
+            <div className="main__table--info">
+              <div className="main__table--info--client">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <rect width="32" height="32" rx="16" fill="#ECEBF0" />
+                  <path
+                    d="M7.0815 11.2727H9.01616L11.6071 17.5966H11.7093L14.3002 11.2727H16.2349V20H14.7179V14.0043H14.6369L12.225 19.9744H11.0914L8.67951 13.9915H8.59854V20H7.0815V11.2727ZM19.1241 11.2727L21.3954 18.142H21.4849L23.752 11.2727H25.4906L22.4139 20H20.4622L17.3897 11.2727H19.1241Z"
+                    fill="#2E046D"
+                  />
+                </svg>
+                <span className="main__table-client--name">Marília Vilarinho Almada</span>
               </div>
               <span>30/09/2022</span>
               <span>R$ 999,00</span>

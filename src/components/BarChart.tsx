@@ -32,22 +32,7 @@ export const options = {
   },
 };
 
-const UserData = [
-  {
-      value: "0",
-      date: "10/11/21"
-  },
-  {
-      value: "3M",
-      date: "10/12/21"
-  },
-  {
-      value: "2M",
-      date: "10/1/22"
-  }
-]
-
-const labels = ["10/1/22", 'February', 'March', 'April', 'May', 'June', 'July'];
+const labels = ["10/1/22", '10/12/21', '10/1/22', '10/2/22', '10/3/22', '10/5/22', '10/6/22', '10/8/22', '10/9/22', '10/10/22', '10/4/22', 'July'];
 
 export const data = {
   labels,
@@ -63,7 +48,12 @@ export const data = {
       backgroundColor: 'rgba(53, 162, 235, 0.5)',
     },
     {
-      label: 'Dataset 2',
+      label: 'Dataset 3',
+      data: "1.5",
+      backgroundColor: 'rgba(53, 162, 235, 0.5)',
+    },
+    {
+      label: 'Dataset 4',
       data: "1.5",
       backgroundColor: 'rgba(53, 162, 235, 0.5)',
     }

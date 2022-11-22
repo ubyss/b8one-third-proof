@@ -230,6 +230,19 @@ margin-bottom: 36px;
     align-items: center;
 }
 
+.main__table--info{
+    padding: 16px 0;
+}
+
+.main__table-client--name{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+}
+
 .main__table--info--client{
     gap: 8px;
 }
