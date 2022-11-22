@@ -4,45 +4,26 @@ import {useEffect, useState} from 'react'
 
 import {useMutation, gql} from '@apollo/client'
 import { useNavigate } from "react-router-dom";
+import {SIGN_IN} from '../../graphql/signIn'
 
-const SIGN_IN = gql`
-mutation signIn($input: SignInInput!){
-  signIn(input: $input){
-    token
-    user{
-      email
-      name
-    }
-  }
-}
-`
+import { SignIn } from '../../typings/login'
 
-type SignIn = {
-    signIn: {
-        token: string,
-        user: {
-            email: string,
-            name: string
-        }
-    }
-}
 const Login = () => {
 
     const navigate = useNavigate();
     const [password, setPassword] = useState("")
     const [email, setEmail] = useState("")
+    const [sendWarning, setSendWarning] = useState(false)
 
     const [SignInPage, { data, loading, error }] = useMutation<SignIn>(SIGN_IN)
 
     useEffect(() => {
-
         if(data) navigate("/dashboard");
+        if(error) console.log("error")
     }, [data])
 
     const signIn = () => {
         SignInPage({ variables: { input: {email, password}}})
-
-        
     }
   return (
     <>
@@ -75,12 +56,8 @@ const Login = () => {
                     <input type="checkbox" className='container-checkbox--input' />
                     <label className='container-checkbox--label' htmlFor='login-modal__input--keeplogin'>Manter conectado</label>
                 </div>
-                {/* <Link to='/dashboard'> */}
-
-                {/* </Link> */}
             </form>
             <button onClick={signIn} className='login-modal__submit'>Entrar</button>
-            <hr />
             <div className='go-to-register__container'>
                 <Link className='go-to-register__link' to='/'>Não possui conta? Cadastre-se</Link>
             </div>

@@ -1,28 +1,33 @@
-import React from 'react'
-
+import "../../styles/Dashboard/style.scss";
+import Navbar from './Navbar'
 
 const Dashboard = () => {
-
   return (
     <>
-        <header className='dashboard__top-bar'>
-        <div className='top-bar__left-menu'>
-
-<h1>Academy Store</h1>
+      <header className="dashboard__top-bar">
+        <div className="top-bar__left-menu">
+          <img
+            className="top-bar__logo-image"
+            src="./src/assets/logo.svg"
+            alt="Academy Store"
+          />
+          <h1 className="top-bar__logo-title">Academy Store</h1>
         </div>
-            <div className='top-bar__right-menu'>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M9.08997 9.00008C9.32507 8.33175 9.78912 7.76819 10.3999 7.40921C11.0107 7.05024 11.7289 6.91902 12.4271 7.03879C13.1254 7.15857 13.7588 7.52161 14.215 8.06361C14.6713 8.60561 14.921 9.2916 14.92 10.0001C14.92 12.0001 11.92 13.0001 11.92 13.0001" stroke="#17092C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M12 17H12.0094" stroke="#17092C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
+        <div className="top-bar__right-menu">
+          <img className="top-bar__righ--icons" src="./src/assets/help-logo.svg" alt="" />
+          <img className="top-bar__righ--icons" src="./src/assets/notification-icon.svg" alt="" />
+          <div className="right-menu__user-info">
+            <img className="top-bar__righ--icons" src="./src/assets/user-avatar.svg" alt="" />
+            <span className="right-menu__user-name">Gustavo Lima</span>
+          </div>
+        </div>
+      </header>
 
-            </div>
-        </header>
-        <aside></aside>
-        <main></main>
+      <Navbar />
+
+      <main></main>
     </>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;
