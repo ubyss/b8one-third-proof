@@ -1,92 +1,270 @@
-.dashboard__top-bar{
+.dashboard__top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px 16px 24px;
+  gap: 32px;
+  position: absolute;
+  width: 1440px;
+  height: 64px;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  background: #17092c;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+  position: fixed;
+}
+
+.top-bar__left-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-bar__logo-title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.top-bar__right-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.top-bar__righ--icons {
+  cursor: pointer;
+}
+
+.right-menu__user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.right-menu__user-name {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+.navbar-container--itens {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px;
+}
+
+.navbar-container {
+  background: #ffffff;
+  width: 244px;
+  height: 100vh;
+  cursor: pointer;
+  position: fixed;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 14px 0 0;
+}
+
+.nav-item__name {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.005em;
+  color: #000000;
+}
+
+.nav-item__container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dropdown-icon {
+  margin-left: auto;
+}
+
+.container-content {
+  display: flex;
+  margin-top: 64px;
+}
+
+.main-content {
+  width: 82%;
+  margin: 32px 0 0 auto;
+}
+
+
+.welcome-user {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+
+  letter-spacing: -0.01em;
+
+  color: #000000;
+}
+
+.text-info-page {
+  margin-top: 8px;
+  margin-bottom: 32px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #555555;
+}
+
+.main-dashboard {
+  margin-top: 32px;
+  padding: 24px;
+  background: #FFFFFF;
+  .main-dashboard__tab--title {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+
+    letter-spacing: -0.005em;
+
+    color: #333333;
+  }
+}
+
+.main__date-container {
+  button {
+    padding: 8px 16px;
+    gap: 8px;
+    height: 32px;
+    background: #ECEBF0;
+    border-radius: 5px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #333333;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px;
+  }
+}
+
+.main__date-container {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0 12px 0;
+}
+
+.main-dashboard__info-dates {
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 11px;
+line-height: 16px;
+/* identical to box height, or 145% */
+
+letter-spacing: -0.005em;
+
+color: #333333;
+margin-bottom: 36px;
+    .main-dashboard__choosed-date{
+        color: #2E046D;
+        cursor: pointer;
+    }
+}
+
+.main__container-value {
+  display: flex;
+  gap: 16px;
+}
+
+.main-dashboard--choosed-date{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
+.main-dashboard--choosed-date-info{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.001em;
+    color: #333333;
+    width: 18%;
+}
+
+.main__table--info,
+.main__table--info--client{
+    display: flex;
+    align-items: center;
+}
+
+.main__table--info--client{
+    gap: 8px;
+}
+
+.main__last-sells{
+    padding: 24px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+
+}
+
+.main__title-last--sells{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 28px;
+color: #000000;
+}
+
+.main__table-title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;                                                                                                                                                                                                                                                                               
+    font-size: 12px;
+    line-height: 16px;
+    color: #333333;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 16px 32px 16px 24px;
-    gap: 32px;
-    position: absolute;
-    width: 1440px;
-    height: 64px;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    background: #17092C;
-    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 
-.top-bar__left-menu{
+.main__table--info{
     display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.top-bar__logo-title{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    display: flex;
-    align-items: center;
-    color: #FFFFFF;
-}
-
-.top-bar__right-menu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-}
-
-.top-bar__righ--icons{
-    cursor: pointer;
-}
-
-.right-menu__user-info{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-}
-
-.right-menu__user-name{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    display: flex;
-    align-items: center;
-    color: #FFFFFF;
-}
-
-.navbar-container--itens{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 12px 14px;
-}
-
-.navbar-container{
-    margin-top: 64px;
-    background: #FFFFFF;
-    width: 244px;
-    height: 100vh;
-    cursor: pointer;
-}
-
-.nav-item{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.nav-item__name{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: -0.005em;
-    color: #000000;
+    justify-content: space-between;
 }

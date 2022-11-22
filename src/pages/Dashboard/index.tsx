@@ -1,4 +1,5 @@
 import "../../styles/Dashboard/style.scss";
+import Aside from "./Aside";
 import Navbar from './Navbar'
 
 const Dashboard = () => {
@@ -22,10 +23,10 @@ const Dashboard = () => {
           </div>
         </div>
       </header>
-
-      <Navbar />
-
-      <main></main>
+      <main className="container-content">
+        <Navbar />
+        <Aside />
+      </main>
     </>
   );
 };
